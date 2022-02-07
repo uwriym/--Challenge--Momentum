@@ -1,5 +1,9 @@
 @import "reset.css";
 
+.hidden {
+  display: none;
+}
+
 .bgImage {
   position: absolute;
   width: 100%;
@@ -15,5 +19,9 @@
 }
 
 footer {
+  color: white;
+}
+
+#greeting {
   color: white;
 }
