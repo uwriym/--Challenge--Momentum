@@ -7,7 +7,16 @@ const USERNAME_KEY = "username";
 const HIDDEN_CLASSNAME = "hidden";
 
 function paintGreeting(username) {
-  greeting.innerText = `Good day, ${username}`;
+  let currentTime = "";
+  const hours = new Date().getHours();
+  if (hours >= 05 && Number(hours) < 12) {
+    currentTime = "Good morning";
+  } else if (hours >= 12 && Number(hours) < 19) {
+    currentTime = "Good afternoon";
+  } else {
+    currentTime = "Good night";
+  }
+  greeting.innerText = `${currentTime}, ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 

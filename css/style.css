@@ -1,7 +1,45 @@
+/* font Import */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Quicksand:wght@500;600&display=swap");
+/* CSS import */
 @import "reset.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Myeongjo", serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .hidden {
   display: none;
+}
+
+.box {
+  border: 2px solid white;
+  height: 90vh;
+  max-height: 90vh;
+  width: 46vw;
+  margin: 30px;
+}
+
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80vh;
+  overflow: auto;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 10px;
 }
 
 .bgImage {
@@ -14,14 +52,15 @@
 }
 
 #clock {
-  font-size: 200px;
+  font-size: 100px;
   color: whitesmoke;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 800;
 }
 
+#greeting,
+#weather,
+#todo-list,
 footer {
-  color: white;
-}
-
-#greeting {
   color: white;
 }

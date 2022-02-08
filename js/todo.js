@@ -24,8 +24,14 @@ function paintToDo(newToDo) {
   span.innerText = newToDo.text;
   const button = document.createElement("button");
   button.innerText = "❌";
+  button.id = "delete-btn";
   button.addEventListener("click", deleteToDo);
+  const checkBox = document.createElement("input");
+  checkBox.type = "checkbox";
+  checkBox.id = "checkbox";
+
   toDoList.appendChild(li);
+  li.appendChild(checkBox);
   li.appendChild(span);
   li.appendChild(button);
 }
