@@ -20,6 +20,7 @@ body {
 
 .box {
   border: 2px solid white;
+  border-radius: 10px;
   height: 90vh;
   max-height: 90vh;
   width: 46vw;
@@ -61,7 +62,7 @@ footer {
   margin-top: 200px;
 }
 #greeting {
-  font-size: 70px;
+  font-size: 50px;
   margin-top: 50px;
 }
 
