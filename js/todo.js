@@ -10,6 +10,17 @@ function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
+function checkToDo(event) {
+  const checkedLi = event.target.parentElement;
+  if (checkedLi.getAttribute("checked", "") === null) {
+    checkedLi.setAttribute("checked", "");
+    checkedLi.setAttribute("style", "text-decoration: line-through");
+  } else {
+    checkedLi.removeAttribute("checked", "");
+    checkedLi.removeAttribute("style", "text-decoration: line-through");
+  }
+}
+
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
@@ -29,7 +40,7 @@ function paintToDo(newToDo) {
   const checkBox = document.createElement("input");
   checkBox.type = "checkbox";
   checkBox.id = "checkbox";
-
+  checkBox.addEventListener("click", checkToDo);
   toDoList.appendChild(li);
   li.appendChild(checkBox);
   li.appendChild(span);

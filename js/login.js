@@ -9,10 +9,12 @@ const HIDDEN_CLASSNAME = "hidden";
 function paintGreeting(username) {
   let currentTime = "";
   const hours = new Date().getHours();
-  if (hours >= 05 && Number(hours) < 12) {
+  if (hours >= 05 && hours < 12) {
     currentTime = "Good morning";
-  } else if (hours >= 12 && Number(hours) < 19) {
+  } else if (hours >= 12 && hours < 19) {
     currentTime = "Good afternoon";
+  } else if (hours >= 19 && hours < 23) {
+    currentTime = "Good evening";
   } else {
     currentTime = "Good night";
   }
