@@ -19,8 +19,8 @@ body {
 }
 
 .box {
-  border: 2px solid white;
-  border-radius: 10px;
+  border: 5px solid white;
+  border-radius: 30px;
   height: 90vh;
   max-height: 90vh;
   width: 46vw;
@@ -28,6 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 #todo-list {
@@ -51,7 +52,17 @@ footer {
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
+}
+
+#todo-form {
+  margin-top: 20px;
+  width: 300px;
+}
+#todo-input {
+  width: 100%;
+  
+  
 }
 
 #clock {
@@ -71,4 +82,11 @@ footer {
 #todo-list,
 footer {
   color: white;
+}
+
+#delete-btn {
+  margin-left: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
 }
