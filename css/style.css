@@ -20,10 +20,10 @@ body {
 
 .box {
   position: relative;
-
   border-radius: 30px;
-  height: 90vh;
-  max-height: 90vh;
+  height: 87vh;
+  max-height: 87vh;
+  min-height: 550px;
   width: 46vw;
   margin: 30px;
   display: flex;
@@ -41,6 +41,15 @@ body {
   border-radius: 20px;
 }
 
+#weather {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
+#weather span {
+  color: white;
+}
+
 #todo-list {
   display: flex;
   flex-direction: column;
@@ -54,6 +63,11 @@ footer {
   width: 100%;
   text-align: center;
   bottom: 10px;
+  color: white;
+}
+#author {
+  font-size: 13px;
+  margin-top: 3px;
 }
 
 .bgImage {
@@ -71,6 +85,9 @@ footer {
   font-family: "Quicksand", sans-serif;
   font-weight: 800;
   margin-top: 200px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
 }
 #greeting {
   font-size: 50px;
@@ -79,8 +96,7 @@ footer {
 
 #greeting,
 #weather,
-#todo-list,
-footer {
+#todo-list {
   color: black;
 }
 
@@ -122,11 +138,12 @@ footer {
   border: 2px solid white;
   border-radius: 50%;
   cursor: pointer;
-  transition: border-color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 13px;
+  color: white;
 }
 
 .checkbox:hover {

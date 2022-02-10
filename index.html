@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
     <section class="box">
       <form id="todo-form">
         <input
@@ -23,6 +27,7 @@
     </section>
     <section class="box">
       <h1 id="clock">00:00:00</h1>
+      <span id="date"></span>
 
       <form id="login-form" class="hidden">
         <input
@@ -34,17 +39,13 @@
         <input type="submit" value="LOG IN" />
       </form>
       <span id="greeting" class="hidden"></span>
-      <div id="weather">
-        <span></span>
-        <span></span>
-      </div>
 
       <div class="section__background"></div>
     </section>
 
     <footer>
-      <span id="quote"></span>
-      <span id="author"></span>
+      <div id="quote"></div>
+      <div id="author"></div>
     </footer>
     <script src="js/clock.js"></script>
     <script src="js/background.js"></script>
