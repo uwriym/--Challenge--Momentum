@@ -9,8 +9,8 @@
   </head>
   <body>
     <div id="weather">
-      <span></span>
-      <span></span>
+      <div></div>
+      <div></div>
     </div>
     <section class="box">
       <form id="todo-form">
@@ -25,9 +25,11 @@
 
       <div class="section__background"></div>
     </section>
-    <section class="box">
-      <h1 id="clock">00:00:00</h1>
-      <span id="date"></span>
+    <section class="box section2">
+      <div class="clockAndDate">
+        <h1 id="clock">00:00:00</h1>
+        <span id="date"></span>
+      </div>
 
       <form id="login-form" class="hidden">
         <input
@@ -36,7 +38,6 @@
           placeholder="Write your name..."
           required
         />
-        <input type="submit" value="LOG IN" />
       </form>
       <span id="greeting" class="hidden"></span>
 

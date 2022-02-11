@@ -10,7 +10,6 @@ function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
-
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
@@ -21,11 +20,11 @@ function deleteToDo(event) {
 function paintDone(event) {
   const checkBox = event.target;
   checkBox.innerText = "✔︎";
-  checkBox.innerText.style.color = "green";
+  checkBox.style.color = "rgb(0, 252, 168)";
 }
 function deleteDone(event) {
-  const checkBox = event.target
-checkBox.innerText = "";
+  const checkBox = event.target;
+  checkBox.innerText = "";
 }
 
 function paintToDo(newToDo) {
