@@ -17,6 +17,7 @@ function handleSubmitSearchForm(event) {
   event.preventDefault();
   const inputValue = searchInput.value;
   location.href = `https://www.google.com/search?q=${inputValue}`;
+  searchInput.value = "";
 }
 
 searchForm.addEventListener("mouseenter", handleInputVisible);

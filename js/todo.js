@@ -20,7 +20,6 @@ function deleteToDo(event) {
 function paintDone(event) {
   const checkBox = event.target;
   checkBox.innerText = "✔︎";
-  checkBox.style.color = "rgb(0, 180, 120)";
 }
 function deleteDone(event) {
   const checkBox = event.target;
