@@ -1,0 +1,43 @@
+#clock {
+  font-size: 90px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+#date {
+  margin-top: 10px;
+}
+.clockAndDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#login-input {
+  border: none;
+  font-family: "Noto Sans KR", sans-serif;
+  height: 50px;
+  margin-right: -9.5px;
+  width: 400px;
+  font-size: 18px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+}
+#login-input:focus {
+  border-color: black;
+}
+#login-input:focus::placeholder {
+  color: transparent;
+}
+
+#greeting {
+  font-size: 40px;
+  font-weight: 700;
+  height: 50px;
+  color: black;
+}

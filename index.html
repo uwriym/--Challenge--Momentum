@@ -20,7 +20,8 @@
       <div></div>
       <div></div>
     </div>
-    <section class="box">
+    <section class="box section1">
+      <div>To Do List</div>
       <form id="todo-form">
         <input
           id="todo-input"
@@ -28,8 +29,8 @@
           placeholder="What is your main focus of today?"
           required
         />
+        <ul id="todo-list"></ul>
       </form>
-      <ul id="todo-list"></ul>
 
       <div class="section__background"></div>
     </section>
@@ -51,17 +52,39 @@
 
       <div class="section__background"></div>
     </section>
-    <section class="box">
+    <section class="box section3">
       <div id="exchange-rate">
         <div>USD/KRW Exchange Rate</div>
-        <div id="base-price"></div>
-        <div id="buying-price"></div>
-        <div id="selling-price"></div>
+        <div id="exchange-price">
+          <div id="base-price" class="exchange-price__sheet">
+            <span>Base Price</span>
+            <span></span>
+          </div>
+          <div id="buying-price" class="exchange-price__sheet">
+            <span>Buying Price</span>
+            <span></span>
+          </div>
+          <div id="selling-price" class="exchange-price__sheet">
+            <span>Selling Price</span>
+            <span></span>
+          </div>
+        </div>
       </div>
-      <form id="exchange-rate-calculator">
-        <input type="number" placeholder="Write KRW and press ENTER" required />
-      </form>
-      <div id="calculate-result"></div>
+      <div id="exchange-rate-calculator">
+        <div>USD/KRW Calculator</div>
+        <div id="calculator-box">
+          <form id="exchange-rate-calculator__usdtokrw">
+            <label for="usd-input">$</label>
+            <input id="usd-input" type="number" placeholder="Write USD" />
+            <div class="calculator__result"></div>
+          </form>
+          <form id="exchange-rate-calculator__krwtousd">
+            <label for="krw-input">₩</label>
+            <input id="krw-input" type="number" placeholder="Write KRW" />
+            <div class="calculator__result"></div>
+          </form>
+        </div>
+      </div>
 
       <div class="section__background"></div>
     </section>
@@ -69,6 +92,7 @@
       <div id="quote"></div>
       <div id="author"></div>
     </footer>
+    <script src="js/common.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/background.js"></script>
     <script src="js/quote.js"></script>

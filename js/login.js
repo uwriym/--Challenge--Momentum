@@ -41,4 +41,5 @@ if (savedUsername === null) {
   loginForm.addEventListener("submit", submitLogin);
 } else {
   paintGreeting(savedUsername);
+  setInterval(paintGreeting(savedUsername), 3600000);
 }

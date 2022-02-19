@@ -1,0 +1,46 @@
+#link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease-in-out;
+  font-size: 18px;
+}
+#link:hover {
+  color: white;
+}
+#google-search {
+  position: fixed;
+  top: 12px;
+  left: 75px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease-in-out;
+}
+#google-search:focus-within {
+  color: white;
+}
+#google-search input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  height: 27px;
+  width: 200px;
+  color: white;
+  padding: 0px 25px 8.5px 25px;
+  font-size: 16px;
+  vertical-align: middle;
+  transition: border-color 0.3s ease-in-out;
+}
+#google-search input:focus {
+  border-color: white;
+}
+#google-search .fa-magnifying-glass {
+  z-index: 1;
+  position: absolute;
+  left: 1px;
+}
+#google-search .fa-google {
+  z-index: 1;
+  position: absolute;
+  right: 2px;
+}

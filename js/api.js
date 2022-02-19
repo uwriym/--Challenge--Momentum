@@ -28,26 +28,58 @@ navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 fetch(`https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWUSD`)
   .then((response) => response.json())
   .then((data) => {
-    const basePrice = document.querySelector("#base-price");
-    basePrice.innerText = `Base Price: ${data[0].basePrice}`;
-    const buyingPrice = document.querySelector("#buying-price");
-    buyingPrice.innerText = `buying Price: ${data[0].cashBuyingPrice}`;
-    const sellingPrice = document.querySelector("#selling-price");
-    sellingPrice.innerText = `selling Price: ${data[0].cashSellingPrice}`;
+    //가격 표시
+    const basePrice = document.querySelector("#base-price span:last-child");
+    basePrice.innerText = data[0].basePrice.toLocaleString("en-US");
+    const buyingPrice = document.querySelector("#buying-price span:last-child");
+    buyingPrice.innerText = data[0].cashBuyingPrice.toLocaleString("en-US");
+    const sellingPrice = document.querySelector(
+      "#selling-price span:last-child"
+    );
+    sellingPrice.innerText = data[0].cashSellingPrice.toLocaleString("en-US");
 
-    const exchangeCalculator = document.querySelector(
-      "#exchange-rate-calculator"
+    //계산기
+    const calculatorFormUsdToKrw = document.querySelector(
+      "#exchange-rate-calculator__usdtokrw"
     );
-    const calculateResult = document.querySelector("#calculate-result");
-    const exchangeCalculatorInput = document.querySelector(
-      "#exchange-rate-calculator input"
+    const calculateUsdToKrwInput = document.querySelector(
+      "#exchange-rate-calculator__usdtokrw input"
     );
-    function calculateExchange(event) {
+    calculateUsdToKrwInput.toLocaleString("en-US");
+
+    const calculatorFromKrwtoUsd = document.querySelector(
+      "#exchange-rate-calculator__krwtousd"
+    );
+    const calculateKrwtoUsdInput = document.querySelector(
+      "#exchange-rate-calculator__krwtousd input"
+    );
+
+    //usd -> krw 계산기
+    function calculateUsdToKrw(event) {
       event.preventDefault();
-      calculateResult.innerText = `$${exchangeCalculatorInput.value} = ₩${
-        data[0].basePrice * exchangeCalculatorInput.value
-      }`;
-      exchangeCalculatorInput.value = "";
+      const calculateResult = (
+        calculateUsdToKrwInput.value * data[0].basePrice
+      ).toLocaleString("en-US");
+
+      const result = document.querySelector(
+        "#exchange-rate-calculator__usdtokrw div"
+      );
+
+      result.innerText = `₩${calculateResult}`;
     }
-    exchangeCalculator.addEventListener("submit", calculateExchange);
+    calculatorFormUsdToKrw.addEventListener("submit", calculateUsdToKrw);
+    //krw -> usd 계산기
+    function calculateKrwToUsd(event) {
+      event.preventDefault();
+      const calculateResult = (
+        calculateKrwtoUsdInput.value / data[0].basePrice
+      ).toLocaleString("en-US");
+
+      const result = document.querySelector(
+        "#exchange-rate-calculator__krwtousd div"
+      );
+
+      result.innerText = `$${calculateResult}`;
+    }
+    calculatorFromKrwtoUsd.addEventListener("submit", calculateKrwToUsd);
   });

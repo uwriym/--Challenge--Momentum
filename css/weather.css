@@ -1,0 +1,22 @@
+#weather {
+  position: absolute;
+  top: 0px;
+  right: 13px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  color: black;
+}
+#weather img {
+  margin-top: 7px;
+}
+#weather div:nth-child(2) {
+  color: white;
+  font-size: 23px;
+  margin-left: 5px;
+}
+#weather div:nth-child(3) {
+  margin-left: 10px;
+  color: white;
+  opacity: 0.8;
+}
