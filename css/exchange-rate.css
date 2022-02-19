@@ -76,6 +76,7 @@
   font-weight: 700;
   text-align: center;
   transition: border-bottom 0.3s ease-in-out;
+  padding: 5px;
 }
 #usd-input:focus,
 #krw-input:focus {

@@ -16,6 +16,7 @@
   transition: border-color 0.3s ease-in-out;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 700;
+  padding: 0px 5px;
 }
 #todo-input::placeholder {
   color: black;
